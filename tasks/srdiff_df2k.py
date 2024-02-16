@@ -23,7 +23,7 @@ class Df2kDataSet(SRDataSet):
 
         self.data_aug_transforms = transforms.Compose([
             transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(20, resample=Image.BICUBIC),
+            transforms.RandomRotation(20, interpolation=Image.BICUBIC),
             transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
         ])
 
